@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import PurchaseButton from "../buttons/purchaseButton"
 import { themes } from "../styles/ColorStyles"
 import { H1, MediumText } from "../styles/textStyles"
 
@@ -33,6 +34,10 @@ const HeroSection = () => {
             Design <br></br> Focused React App
           </Title>
           <Description>Welcome to your new Gatsby site.</Description>
+          <PurchaseButton
+            title="Start learning"
+            subtitle="100+ hours of content"
+          />
         </TextWrapper>
       </ContentWrapper>
     </Wrapper>

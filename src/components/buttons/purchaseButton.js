@@ -3,6 +3,25 @@ import styled from "styled-components"
 import { Caption2, SmallText } from "../styles/textStyles"
 import { Link } from "gatsby"
 
+const PurchaseButton = ({ title, subtitle }) => {
+  return (
+    <Link to="page-2">
+      <Wrapper>
+        <IconWrapper>
+          <Icon src="/images/icons/credit.svg" />
+          <Ring src="/images/icons/icon-ring.svg"></Ring>
+        </IconWrapper>
+        <TextWrapper>
+          <Title>{title || "Get Pro Access"}</Title>
+          <Subtitle>{subtitle || "$10000 per month"}</Subtitle>
+        </TextWrapper>
+      </Wrapper>
+    </Link>
+  )
+}
+
+export default PurchaseButton
+
 const Wrapper = styled.div`
   width: 280px;
   height: 77px;
@@ -16,6 +35,14 @@ const Wrapper = styled.div`
   grid-template-columns: 53px auto;
   align-content: center;
   gap: 20px;
+  transition: 0.3s ease-in-out;
+
+  :hover {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
+      0px 30px 60px rgba(23, 0, 102, 0.5),
+      inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.5);
+    transform: translateY(-3px);
+  }
 `
 
 const Title = styled(Caption2)`
@@ -54,22 +81,3 @@ const Ring = styled.img`
   top: -15px;
   left: -16px;
 `
-
-const PurchaseButton = ({ title, subtitle }) => {
-  return (
-    <Link to="page-2">
-      <Wrapper>
-        <IconWrapper>
-          <Icon src="/images/icons/credit.svg" />
-          <Ring src="/images/icons/icon-ring.svg"></Ring>
-        </IconWrapper>
-        <TextWrapper>
-          <Title>{title || "Get Pro Access"}</Title>
-          <Subtitle>{subtitle || "$10000 per month"}</Subtitle>
-        </TextWrapper>
-      </Wrapper>
-    </Link>
-  )
-}
-
-export default PurchaseButton

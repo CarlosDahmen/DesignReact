@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: [
+  onPluginInit: [
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {

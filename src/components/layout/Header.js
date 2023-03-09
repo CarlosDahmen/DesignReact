@@ -7,6 +7,10 @@ import MenuTooltip from "../tooltips/MenuTooltip"
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const clickHandler = evt => {
+    evt.preventDefault()
+    setIsOpen(!isOpen)
+  }
 
   return (
     <Wrapper>
@@ -19,7 +23,7 @@ const Header = () => {
             <MenuButton
               item={item}
               key={index}
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={evt => clickHandler(evt)}
             >
               Account
             </MenuButton>

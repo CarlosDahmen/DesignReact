@@ -10,7 +10,6 @@ const HeroSection = () => {
     <Wrapper>
       <ContentWrapper>
         <TextWrapper>
-          <img src="/images/logos/logo.svg" alt="logo" />
           <Title>
             Design <br></br> Focused React App
           </Title>

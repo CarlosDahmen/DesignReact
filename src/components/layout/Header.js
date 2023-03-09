@@ -3,6 +3,7 @@ import React from "react"
 import styled from "styled-components"
 import { menuData } from "../../data/MenuData"
 import MenuButton from "../buttons/MenuButton"
+import MenuTooltip from "../tooltips/MenuTooltip"
 
 const Header = () => {
   return (
@@ -15,6 +16,7 @@ const Header = () => {
           <MenuButton item={item} key={index} />
         ))}
       </MenuWrapper>
+      <MenuTooltip />
     </Wrapper>
   )
 }

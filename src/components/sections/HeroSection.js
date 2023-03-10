@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import MockupAnimation from "../animations/MockupAnimation"
+import WaveBackground from "../backgrounds/WaveBackground"
 import PurchaseButton from "../buttons/purchaseButton"
 import { themes } from "../styles/ColorStyles"
 import { H1, MediumText } from "../styles/textStyles"
@@ -8,6 +9,7 @@ import { H1, MediumText } from "../styles/textStyles"
 const HeroSection = () => {
   return (
     <Wrapper>
+      <WaveBackground />
       <ContentWrapper>
         <TextWrapper>
           <Title>
@@ -28,7 +30,6 @@ const HeroSection = () => {
 export default HeroSection
 
 const Wrapper = styled.div`
-  background: linear-gradient(180deg, #4316db 0%, #9076e7 100%);
   overflow: hidden;
 `
 
